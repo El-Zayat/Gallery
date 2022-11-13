@@ -11,19 +11,19 @@ class API {
   async login(email, password) {
 
     let data = { email, password }
-    return axios.post(this.url + '/user/login', data)
+    return axios.post('/user/login', data)
 
   }
 
   async register(email, password, name) {
 
     let data = { name, email, password }
-    return axios.post(this.url + '/user/register', data)
+    return axios.post('/user/register', data)
 
   }
 
   checkAuth(token) {
-    return axios.post(this.url + '/user/me', {token})
+    return axios.post('/user/me', {token})
   }
 
 }

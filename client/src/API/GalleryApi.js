@@ -9,7 +9,7 @@ class API {
   // TODO - Remove this.url from all the methods below
 
   uploadImage(formData, user) {
-    return axios.post(this.url + `/images/${user}`, formData, {
+    return axios.post(`/images/${user}`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
@@ -17,19 +17,19 @@ class API {
   }
 
   getAllImages() {
-    return axios.get(this.url + '/images')
+    return axios.get('/images')
   }
 
   getUserImages(id) {
-    return axios.get(this.url + `/user/${id}/images`)
+    return axios.get(`/user/${id}/images`)
   }
 
   likeImage(id, userId) {
-    return axios.post(this.url + `/image/${id}/like/${userId}`)
+    return axios.post(`/image/${id}/like/${userId}`)
   }
 
   deleteImage(id) {
-    return axios.delete(this.url + `/user/image/${id}`)
+    return axios.delete(`/user/image/${id}`)
   }
 
 }

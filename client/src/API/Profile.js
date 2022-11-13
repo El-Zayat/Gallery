@@ -8,7 +8,7 @@ class Profile {
   // TODO - Remove this.url from all the methods below
 
   async uploadAvatar(id, avatar) {
-    return axios.patch(this.url + '/user/me/avatar/' + id, avatar, {
+    return axios.patch('/user/me/avatar/' + id, avatar, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
