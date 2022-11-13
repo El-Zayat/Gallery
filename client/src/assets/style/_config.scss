@@ -1,0 +1,12 @@
+$primary: #1976d2;
+$text: #555;
+
+.viewer-open {
+  padding-right: 0 !important;
+}
+
+@mixin centerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
